@@ -1,4 +1,4 @@
-# [✨**DoIt-List** Web App | Manage Your Daily Targets Easily](https://doit-list.vercel.app/)
+# [✨**DoIt-List** Web App | Manage Your Daily Targets Easily...](https://doit-list.vercel.app/)
 
 This repository contains a Futuristic and Elegant DoIt List web app built using CSS and JavaScript. The app allows users to create, manage, and save DoIts, all while enjoying a beautiful UI design.
 
