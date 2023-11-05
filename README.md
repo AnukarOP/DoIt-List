@@ -1,8 +1,8 @@
-# [**DoIt-List** Web App | Manage Your Daily Targets Easily ✨](https://doit-list.vercel.app/)
+# [✨**DoIt-List** Web App | Manage Your Daily Targets Easily](https://doit-list.vercel.app/)
 
-This repository contains a simple and elegant Todo List web app built using Tailwind CSS and JavaScript. The app allows users to create, manage, and save todos, all while enjoying a beautiful user interface design.
+This repository contains a Futuristic and Elegant DoIt List web app built using CSS and JavaScript. The app allows users to create, manage, and save DoIts, all while enjoying a beautiful UI design.
 
-## Features
+## 🤩 Features :
 
 - Add new DoIt with a user-friendly interface.
 - Mark Do-Its as completed.
@@ -12,13 +12,14 @@ This repository contains a simple and elegant Todo List web app built using Tail
 - Change DoIt status
 - Filter DoIt by status
 
-## 🪐 Getting Started
+## 🪐 Getting Started :
 
-Direct App Link : 
+Direct App Link : [**DoIt-List**](https://DoIt-list.vercel.app/)
 
 
-## Screenshots
+## 📸 Screenshot :
 
+<a href="https://DoIt-list.vercel.app/"><img src="https://i.ibb.co/HpRb9WN/image.png" alt="image" border="0"></a>
 
 
 ## 🚀 Technologies Used : 
