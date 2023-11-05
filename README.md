@@ -1,16 +1,16 @@
-# **ToDo-List** Web App | Manage Your Daily Targets Easily ✨
+# **DoIt-List** Web App | Manage Your Daily Targets Easily ✨
 
 This repository contains a simple and elegant Todo List web app built using Tailwind CSS and JavaScript. The app allows users to create, manage, and save todos, all while enjoying a beautiful user interface design.
 
 ## Features
 
-- Add new todos with a user-friendly interface.
-- Mark todos as completed.
-- Delete completed todos or those no longer needed.
+- Add new DoIt with a user-friendly interface.
+- Mark Do-Its as completed.
+- Delete completed Do-Its or those no longer needed.
 - Save todos to the local storage for persistent data.
-- Schedule your to-dos
-- Change to-dos status
-- Filter to-dos by status
+- Schedule your DoIt
+- Change DoIt status
+- Filter DoIt by status
 
 ## 🪐 Getting Started
 
@@ -41,7 +41,7 @@ Contributions are what make the open source community such an amazing place to l
 
 🚀 Telegram : [AnukarOP](telegram.me/AnukarOP)
 
-Project Link: [StreamitUP 🚀](https://github.com/AnukarOP/ToDo-List)
+Project Link: [DoIt-List](https://github.com/AnukarOP/DoIt-List)
 
 ## ⭐ Credits :
 
