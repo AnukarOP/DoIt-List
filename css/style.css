@@ -108,7 +108,7 @@ header .input-section {
     justify-content: space-between;
     align-items: center;
     min-height: 100%;
-    max-height: 40vh; /* Adjusted max-height */
+    max-height: 10vh; /* Adjusted max-height */
     overflow-y: auto; /* Added a vertical scrollbar when it exceeds the max height */
     width: 100%;
 }
