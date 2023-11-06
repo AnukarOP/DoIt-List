@@ -209,15 +209,27 @@ function displayTodos(todosArray) {
   });
 }
 
-function generatePDF() {
-    const pdf = new jsPDF();
+// Function to generate and download a PDF of the task list
+function downloadPDF() {
+    const targetsContainer = document.querySelector('.targets-container'); // Replace with your targets container selector
+    const pdfOptions = {
+        margin: 10,
+        filename: 'doit_list.pdf',
+        image: { type: 'jpeg', quality: 0.98 },
+        html2canvas: { scale: 2 },
+        jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
+    };
 
-    // Get the container element and convert it to a PDF
-    const container = document.querySelector('.targets-container');
-    pdf.html(container, {
-        callback: function (pdf) {
-            pdf.save('DoIt_List.pdf');
-        },
-    });
+    // Generate PDF
+    html2pdf()
+        .from(targetsContainer)
+        .set(pdfOptions)
+        .outputPdf((pdf) => {
+            // Download the PDF
+            pdf.save();
+        });
 }
 
+// Add an event listener to the "Download PDF" button
+const downloadPDFButton = document.querySelector('.download-pdf-button'); // Replace with your button selector
+downloadPDFButton.addEventListener('click', downloadPDF);
