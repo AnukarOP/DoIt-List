@@ -25,7 +25,7 @@ function getRandomId() {
 function addToDo(task_input, date_input) {
   let task = {
     id: getRandomId(),
-    task: task_input.value.length > 14 ? task_input.value.slice(0, 14) + "..." : task_input.value,
+    task: task_input.value.length > 20 ? task_input.value.slice(0, 20) + "..." : task_input.value,
     dueDate: date_input.value,
     completed: false,
     status: "pending",
@@ -44,14 +44,14 @@ task_input.addEventListener("keyup", (e) => {
 
 add_btn.addEventListener("click", () => {
   if (task_input.value === "") {
-    showAlertMessage("Please enter a task", "error");
+    showAlertMessage("Please enter a DoIt", "error");
   } else {
     addToDo(task_input, date_input); // Added date input
     saveToLocalStorage();
     showAllTodos();
     task_input.value = "";
     date_input.value = ""; // Added date input
-    showAlertMessage("Task added successfully", "success");
+    showAlertMessage("DoIt added successfully", "success");
   }
 });
 
@@ -61,7 +61,7 @@ delete_all_btn.addEventListener("click", clearAllTodos);
 function showAllTodos() {
   todos_list_body.innerHTML = "";
   if (todos.length === 0) {
-    todos_list_body.innerHTML = `<tr><td colspan="5" class="text-center">No task found</td></tr>`;
+    todos_list_body.innerHTML = `<tr><td colspan="5" class="text-center">No DoIt found</td></tr>`;
     return;
   }
 
@@ -122,7 +122,7 @@ function showAlertMessage(message, type) {
 function deleteTodo(id) {
   todos = todos.filter((todo) => todo.id !== id);
   saveToLocalStorage();
-  showAlertMessage("Todo deleted successfully", "success");
+  showAlertMessage("DoIt deleted successfully", "success");
   showAllTodos();
 }
 
@@ -135,7 +135,7 @@ function editTodo(id) {
   saveToLocalStorage();
   add_btn.addEventListener("click", () => {
     add_btn.innerHTML = "<i class='bx bx-plus bx-sm'></i>";
-    showAlertMessage("Todo updated successfully", "success");
+    showAlertMessage("DoIt updated successfully", "success");
   });
 }
 
@@ -144,10 +144,10 @@ function clearAllTodos() {
   if (todos.length > 0) {
     todos = [];
     saveToLocalStorage();
-    showAlertMessage("All todos cleared successfully", "success");
+    showAlertMessage("All DoIt's cleared successfully", "success");
     showAllTodos();
   } else {
-    showAlertMessage("No todos to clear", "error");
+    showAlertMessage("No DoIt's to clear", "error");
   }
 }
 
@@ -178,7 +178,7 @@ function filterTodos(status) {
 function displayTodos(todosArray) {
   todos_list_body.innerHTML = "";
   if (todosArray.length === 0) {
-    todos_list_body.innerHTML = `<tr><td colspan="5" class="text-center">No task found</td></tr>`;
+    todos_list_body.innerHTML = `<tr><td colspan="5" class="text-center">No DoIt found</td></tr>`;
     return;
   }
   todosArray.forEach((todo) => {
