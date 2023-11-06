@@ -208,3 +208,16 @@ function displayTodos(todosArray) {
     `;
   });
 }
+
+function generatePDF() {
+    const pdf = new jsPDF();
+
+    // Get the container element and convert it to a PDF
+    const container = document.querySelector('.targets-container');
+    pdf.html(container, {
+        callback: function (pdf) {
+            pdf.save('DoIt_List.pdf');
+        },
+    });
+}
+
