@@ -149,7 +149,7 @@ header .input-section {
 }
 
 .targets-container {
-    max-height: 80vh; /* Set a maximum height */
+    max-height: 54vh; /* Set a maximum height */
     overflow-y: auto; /* Add a vertical scrollbar when it exceeds the max height */
 }
 
