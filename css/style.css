@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;800;900&display=swap');
 
+
 * {
     margin: 0;
     padding: 0;
@@ -12,7 +13,7 @@
     --color-secondary: #0957ff;
 }
 
-body {
+body{
     position: relative;
     height: 100vh;
     display: flex;
@@ -20,7 +21,7 @@ body {
     align-items: center;
 }
 
-.author-text {
+.author-text{
     position: absolute;
     bottom: 0;
     left: 0;
@@ -31,6 +32,7 @@ body {
     text-align: center;
 }
 
+
 .container {
     display: flex;
     align-items: center;
@@ -39,15 +41,13 @@ body {
     margin: 0 400px;
     min-width: 640px;
     max-width: 1000px;
-    background: rgba(255, 255, 255, 0.15);
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.3);
-    backdrop-filter: blur(3px);
-    -webkit-backdrop-filter: blur(3px);
+    background: rgba( 255, 255, 255, 0.15 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.3 );
+    backdrop-filter: blur( 3px );
+    -webkit-backdrop-filter: blur( 3px );
     border-radius: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.18);
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
     padding: 20px;
-    min-height: 100vh; /* Set a minimum height */
-    overflow: hidden; /* Hide overflow to prevent UI resizing */
 }
 
 .container header {
@@ -59,19 +59,94 @@ body {
     margin-bottom: 20px;
 }
 
-/* ... other styles ... */
+header h1 {
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.alert-message{
+    width: 100%;
+    transition: all 0.3s ease;
+    transform: scale(0.9);
+}
+
+.alert-message.show{
+    display: block;
+    transform: scale(1);
+}
+
+.alert-message.hide{
+    display: none;
+}
+
+header .input-section {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.input-section input{
+    margin-right: 10px;
+    max-width: 100%;
+}
+
+.todos-filter{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 10px;
+}
 
 .todos-list {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    max-height: 50vh; /* Set a maximum height */
-    overflow-y: auto; /* Add a vertical scrollbar when it exceeds the max height */
+    min-height: 100%;
+    max-height: 54vh;
+    overflow-y: auto;
     width: 100%;
 }
 
-/* ... other styles ... */
+.todos-list .todo-item{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    width: 100%;
+    border-bottom: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+.todo-item p{
+    margin-right: 10px;
+}
+
+.todo-item .todo-actions {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: end;
+    width: 100%;
+    height: 100%;
+}
+
+.todo-actions button:not(:last-child){
+    margin-right: 10px;
+}
+
+.theme-switcher{
+    position: absolute;
+    top: 16px;
+    right: 16px;
+}
 
 /* Responsive */
 @media only screen and (max-width: 530px) {
@@ -80,10 +155,4 @@ body {
         max-width: 96%;
         min-width: 96%;
     }
-}
-
-/* Add a new class for the list container */
-.targets-container {
-    max-height: 50vh; /* Set a maximum height */
-    overflow-y: auto; /* Add a vertical scrollbar when it exceeds the max height */
 }
