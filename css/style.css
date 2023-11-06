@@ -118,13 +118,13 @@ header .input-section {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 5px;
+    padding: 10px;
     width: 100%;
     border-bottom: 1px solid rgba( 255, 255, 255, 0.18 );
 }
 
 .todo-item p{
-    margin-right: 15px;
+    margin-right: 5px;
 }
 
 .todo-item .todo-actions {
@@ -156,7 +156,7 @@ header .input-section {
 
 .targets-container table {
     width: 100%;
-    table-layout: fixed;
+    table-layout: auto;
 }
 
 .targets-container thead {
