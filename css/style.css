@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;800;900&display=swap');
 
-
 * {
     margin: 0;
     padding: 0;
@@ -32,14 +31,13 @@ body{
     text-align: center;
 }
 
-
 .container {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    margin: 0 400px;
-    min-width: 640px;
+    margin: 0 20px; /* Adjusted the margin */
+    min-width: 320px; /* Adjusted the min-width */
     max-width: 700px;
     background: rgba( 255, 255, 255, 0.15 );
     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.3 );
@@ -110,8 +108,8 @@ header .input-section {
     justify-content: space-between;
     align-items: center;
     min-height: 100%;
-    max-height: 40vh;
-    overflow-y: auto;
+    max-height: 40vh; /* Adjusted max-height */
+    overflow-y: auto; /* Added a vertical scrollbar when it exceeds the max height */
     width: 100%;
 }
 
@@ -147,12 +145,6 @@ header .input-section {
     top: 16px;
     right: 16px;
 }
-
-.targets-container {
-    max-height: 40vh; /* Set a maximum height */
-    overflow-y: auto; /* Add a vertical scrollbar when it exceeds the max height */
-}
-
 
 /* Responsive */
 @media only screen and (max-width: 530px) {
