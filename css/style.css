@@ -15,7 +15,7 @@
 
 body{
     position: relative;
-    height: 54vh;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -40,7 +40,7 @@ body{
     flex-direction: column;
     margin: 0 400px;
     min-width: 640px;
-    max-width: 1000px;
+    max-width: 700px;
     background: rgba( 255, 255, 255, 0.15 );
     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.3 );
     backdrop-filter: blur( 3px );
