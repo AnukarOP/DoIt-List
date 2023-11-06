@@ -209,27 +209,37 @@ function displayTodos(todosArray) {
   });
 }
 
-// Function to generate and download a PDF of the task list
-function downloadPDF() {
-    const targetsContainer = document.querySelector('.targets-container'); // Replace with your targets container selector
-    const pdfOptions = {
-        margin: 10,
-        filename: 'doit_list.pdf',
-        image: { type: 'jpeg', quality: 0.98 },
-        html2canvas: { scale: 2 },
-        jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
-    };
+// Function to generate a shareable link
+function generateShareableLink() {
+    const displayTodos = document.querySelector('.targets-container'); // Replace with your targets container selector
+    const taskListHTML = targetsContainer.innerHTML;
 
-    // Generate PDF
-    html2pdf()
-        .from(targetsContainer)
-        .set(pdfOptions)
-        .outputPdf((pdf) => {
-            // Download the PDF
-            pdf.save();
-        });
+    // Create a unique ID for the shared task list
+    const uniqueID = Math.random().toString(36).substring(7); // You can use a more robust ID generation method
+
+    // Generate a URL that includes the unique ID
+    const shareableURL = window.location.href.split('?')[0] + `?share=${uniqueID}`;
+
+    // Display the shareable link to the user
+    const shareLinkContainer = document.createElement('div');
+    shareLinkContainer.innerHTML = `
+        <div class="share-link">
+            <p>Share this link with others:</p>
+            <input type="text" value="${shareableURL}" readonly>
+        </div>
+    `;
+
+    targetsContainer.appendChild(shareLinkContainer);
+
+    // Automatically select and copy the shareable link to the clipboard
+    const shareableLinkInput = shareLinkContainer.querySelector('input');
+    shareableLinkInput.select();
+    document.execCommand('copy');
+
+    // Notify the user that the link has been copied
+    alert('Shareable link copied to clipboard');
 }
 
-// Add an event listener to the "Download PDF" button
-const downloadPDFButton = document.querySelector('.download-pdf-button'); // Replace with your button selector
-downloadPDFButton.addEventListener('click', downloadPDF);
+// Add an event listener to the "Share" button
+const shareButton = document.querySelector('.share-button'); // Replace with your button selector
+shareButton.addEventListener('click', generateShareableLink);
