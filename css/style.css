@@ -110,7 +110,7 @@ header .input-section {
     justify-content: space-between;
     align-items: center;
     min-height: 100%;
-    max-height: 54vh;
+    max-height: 40vh;
     overflow-y: auto;
     width: 100%;
 }
@@ -149,7 +149,7 @@ header .input-section {
 }
 
 .targets-container {
-    max-height: 54vh; /* Set a maximum height */
+    max-height: 40vh; /* Set a maximum height */
     overflow-y: auto; /* Add a vertical scrollbar when it exceeds the max height */
 }
 
