@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
-
     <!--- Tailwind CSS & Daisy UI CSS -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@2.18.0/dist/full.css" rel="stylesheet" type="text/css" />
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2/dist/tailwind.min.css" rel="stylesheet" type="text/css" />
@@ -16,12 +15,10 @@
     <title>DoIt List | Manage your Daily Targets | #DoIt</title>
 </head>
 <body>
-
     <!-- Copyright -->
     <div class="author-text">
         <p>/// Made with ❤️ by <a href="https://github.com/AnukarOP" target="_blank"><b>AnukarOP</b> ///</a></p>
     </div>
-    
     <div class="container">
         <header>
             <h1>DoIt List</h1>
@@ -35,7 +32,6 @@
                 </button>
             </div>
         </header>
-
         <div class="todos-filter">
             <div class="dropdown">
                 <label tabindex="0" class="btn m-1">Filter</label>
@@ -49,22 +45,23 @@
                 Delete All
             </button>
         </div>
-
-         <table class="table w-full">
-            <thead>
-                <tr>
-                    <th>Task</th>
-                    <th>Due Date</th>
-                    <th>Status</th>
-                    <th>Actions</th>
-                </tr>
-            </thead>
-            <tbody class="todos-list-body">
-            </tbody>
-        </table>
-
+        <!-- Integrated new code -->
+        <div class="targets-container">
+            <table class="table w-full">
+                <thead>
+                    <tr>
+                        <th>Task</th>
+                        <th>Due Date</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody class="todos-list-body">
+                    <!-- ... (your existing table content) ... -->
+                </tbody>
+            </table>
+        </div>
     </div>
-
     <!--Theme switcher-->
     <div class="theme-switcher">
         <div class="dropdown dropdown-left">
@@ -86,7 +83,6 @@
             </ul>
         </div>
     </div>
-
     <!-- JS -->
     <script src="js/main.js"></script>
     <script src="js/theme_switcher.js"></script>
