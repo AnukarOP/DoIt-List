@@ -81,3 +81,9 @@ body {
         min-width: 96%;
     }
 }
+
+/* Add a new class for the list container */
+.targets-container {
+    max-height: 50vh; /* Set a maximum height */
+    overflow-y: auto; /* Add a vertical scrollbar when it exceeds the max height */
+}
