@@ -146,6 +146,43 @@ header .input-section {
     right: 16px;
 }
 
+/* ... (your existing CSS) ... */
+
+.targets-container {
+    max-height: 40vh; /* Adjusted max-height */
+    overflow-y: auto; /* Added a vertical scrollbar when it exceeds the max height */
+    position: relative;
+}
+
+.targets-container table {
+    width: 100%;
+    table-layout: fixed;
+}
+
+.targets-container thead {
+    background-color: var(--color-primary);
+    color: white;
+}
+
+.targets-container tbody {
+    height: 100%; /* Adjusted height */
+}
+
+.targets-container tbody::-webkit-scrollbar {
+    width: 8px; /* Adjust the width of the scrollbar */
+}
+
+.targets-container tbody::-webkit-scrollbar-thumb {
+    background-color: var(--color-primary); /* Adjust scrollbar thumb color */
+    border-radius: 4px;
+}
+
+.targets-container tbody::-webkit-scrollbar-track {
+    background-color: var(--color-secondary); /* Adjust scrollbar track color */
+    border-radius: 4px;
+}
+
+
 /* Responsive */
 @media only screen and (max-width: 530px) {
     .container {
