@@ -156,7 +156,7 @@ header .input-section {
 
 .targets-container table {
     width: 100%;
-    table-layout: auto;
+    table-layout: fixed;
 }
 
 .targets-container thead {
