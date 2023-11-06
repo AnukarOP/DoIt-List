@@ -183,23 +183,6 @@ header .input-section {
 }
 
 
-.download-pdf-button {
-    position: absolute;
-    top: 16px; /* Adjust the top position as needed */
-    left: 16px; /* Adjust the left position as needed */
-    z-index: 100; /* Ensure it's on top of other elements */
-    background-color: var(--color-secondary);
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.download-pdf-button:hover {
-    background-color: #0957ff; /* Change the color on hover */
-}
-
 /* Responsive */
 @media only screen and (max-width: 530px) {
     .container {
